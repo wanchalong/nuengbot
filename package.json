@@ -1,0 +1,22 @@
+{
+  "name": "nuengbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wanchalong/nuengbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wanchalong/nuengbot/issues"
+  },
+  "homepage": "https://github.com/wanchalong/nuengbot#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
