@@ -19,6 +19,7 @@
   "homepage": "https://github.com/wanchalong/nuengbot#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "request": "^2.72.0"
   }
 }
