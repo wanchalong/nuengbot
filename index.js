@@ -30,6 +30,9 @@ app.post('/webhook/', function (req, res) {
       else if (text === 'เศร้าอ่ะ') {
         sendTextMessage(sender, 'ไปตายซะ!!!')
       }
+      else if (text === 'รักนะ') {
+        sendTextMessage(sender, 'รักเหมือนกัน จุ๊บจุ๊บ <3')
+      }
     // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
     }
   }
