@@ -26,6 +26,7 @@ app.post('/webhook/', function (req, res) {
       console.log(text)
       if (text === 'hi') {
         sendTextMessage(sender, 'Hello!')
+        sendTextMessage(sender, 'คุณต้องการจะทำอะไรครับ?')
       }
       else if (text === 'เศร้าอ่ะ') {
         sendTextMessage(sender, 'ไปตายซะ!!!')
