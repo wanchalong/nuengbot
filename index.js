@@ -39,6 +39,17 @@ app.post('/webhook/', function (req, res) {
         //sendTextMessage(sender, text.substring(4, 6) + text.substring(6, 8))
         sendTextMessage(sender, num1+num2)
       }
+      else if (text.substring(0, 3) === 'max') {
+        var num1 = parseInt(text.substring(4, 6))
+        var num2 = parseInt(text.substring(6, 8))
+        sendTextMessage(sender, Math.max(num1, num2))
+      }
+      else if (text.substring(0, 3) === 'min') {
+        var num1 = parseInt(text.substring(4, 6))
+        var num2 = parseInt(text.substring(6, 8))
+        sendTextMessage(sender, Math.min(num1, num2))
+      }
+
     // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
     }
   }
