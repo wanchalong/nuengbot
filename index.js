@@ -26,13 +26,15 @@ app.post('/webhook/', function (req, res) {
       console.log(text)
       if (text === 'hi') {
         sendTextMessage(sender, 'Hello!')
-        sendTextMessage(sender, 'คุณต้องการจะทำอะไรครับ?')
       }
       else if (text === 'เศร้าอ่ะ') {
         sendTextMessage(sender, 'ไปตายซะ!!!')
       }
       else if (text === 'รักนะ') {
         sendTextMessage(sender, 'รักเหมือนกัน จุ๊บจุ๊บ <3')
+      }
+      else if (text.substring(0, 3) === 'sum') {
+        sendTextMessage(sender, 'sum')
       }
     // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
     }
