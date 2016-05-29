@@ -27,12 +27,6 @@ app.post('/webhook/', function (req, res) {
       if (text === 'hi') {
         sendTextMessage(sender, 'Hello!')
       }
-      else if (text === 'เศร้าอ่ะ') {
-        sendTextMessage(sender, 'ไปตายซะ!!!')
-      }
-      else if (text === 'รักนะ') {
-        sendTextMessage(sender, 'รักเหมือนกัน จุ๊บจุ๊บ <3')
-      }
       else if (text.substring(0, 3) === 'sum') {
         var num1 = parseInt(text.substring(4, 6))
         var num2 = parseInt(text.substring(6, 8))
