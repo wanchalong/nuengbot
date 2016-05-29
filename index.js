@@ -36,8 +36,8 @@ app.post('/webhook/', function (req, res) {
       else if (text.substring(0, 3) === 'sum') {
         var num1 = parseInt(text.substring(4, 6))
         var num2 = parseInt(text.substring(6, 8))
-        //sendTextMessage(sender, text.substring(4, 6) + text.substring(6, 8))
-        sendTextMessage(sender, num1+num2)
+        // sendTextMessage(sender, text.substring(4, 6) + text.substring(6, 8))
+        sendTextMessage(sender, num1 + num2)
       }
       else if (text.substring(0, 3) === 'max') {
         var num1 = parseInt(text.substring(4, 6))
@@ -50,6 +50,16 @@ app.post('/webhook/', function (req, res) {
         sendTextMessage(sender, Math.min(num1, num2))
       }
 
+      else if (text.substring(0, 3) === 'avg') {
+        var sum = 0
+        for ( var i = 4; i < elmt.length; i++) {
+          sum += parseInt(elmt[i], 10)
+        }
+
+        var avg = sum / elmt.length
+
+        sendTextMessage(sender, avg)
+      }
     // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
     }
   }
