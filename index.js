@@ -51,14 +51,17 @@ app.post('/webhook/', function (req, res) {
       }
 
       else if (text.substring(0, 3) === 'avg') {
-        var i
-        var elmt = new Array()
+        var num = []
         var sum = 0
-        for ( var i = 3; i < text.length; i++) {
-          sum += parseInt(elmt[i])
+        var gettext = text.substring(4, text.length)
+        console.log('text : ' + gettext)
+        num = gettext.split(' ')
+        console.log('split : ' + num + ' len = ' + num.length)
+        for (var i = 0;i < num.length;i++) {
+          sum += parseFloat(num[i])
         }
-        var avg = sum / text.length
-        sendTextMessage(sender, sum)
+        console.log('sum : ' + sum + 'avg : ' + sum / num.length)
+        sendTextMessage(sender, 'avg : ' + (sum / num.length).toFixed(2))
       }
     // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
     }
