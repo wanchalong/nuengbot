@@ -34,7 +34,10 @@ app.post('/webhook/', function (req, res) {
         sendTextMessage(sender, 'รักเหมือนกัน จุ๊บจุ๊บ <3')
       }
       else if (text.substring(0, 3) === 'sum') {
-        sendTextMessage(sender, text.substring(4, 6) + text.substring(6, 8))
+        var num1 = parseInt(text.substring(4, 6))
+        var num2 = parseInt(text.substring(6, 8))
+        //sendTextMessage(sender, text.substring(4, 6) + text.substring(6, 8))
+        sendTextMessage(sender, num1+num2)
       }
     // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
     }
