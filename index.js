@@ -52,11 +52,11 @@ app.post('/webhook/', function (req, res) {
 
       else if (text.substring(0, 3) === 'avg') {
         var sum = 0
-        for ( var i = 3; i < elmt.length; i++) {
+        for ( var i = 3; i < text.length; i++) {
           sum += parseInt(elmt[i], 10)
           }
-        var avg = sum / elmt.length
-        sendTextMessage(sender, sum)
+        var avg = sum / text.length
+        sendTextMessage(sender, avg)
       }
     // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
     }
