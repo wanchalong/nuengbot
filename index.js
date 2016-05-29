@@ -55,10 +55,8 @@ app.post('/webhook/', function (req, res) {
         for ( var i = 3; i < elmt.length; i++) {
           sum += parseInt(elmt[i], 10)
           }
-        console.log(sum)
         var avg = sum / elmt.length
-        console.log(avg)
-        sendTextMessage(sender, avg)
+        sendTextMessage(sender, sum)
       }
     // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
     }
